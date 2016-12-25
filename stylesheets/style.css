@@ -1,35 +1,59 @@
-body {
+/*body {
   padding-bottom: 70px;
-}
+}*/
 
 #logo {
   font-family: 'Bungee Shade', cursive;
-  text-align: right;
-
+  text-align: center;
+  margin-top: 0;
+  color: white;
+  padding-top: 1em;
 }
 
 #logo span {
 }
 
-#wrapper {
+/*#wrapper {
   width: 80%;
   margin: 0 auto;
+}*/
+
+#section-intro {
+  background: url("../images/intro_background.jpg") center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
 }
+
+#section-about {
+  height: 100vh;
+  width: 100%;
+}
+
+/*#home-content {
+  height: 100%;
+  width: 100%;
+}*/
 
 /**** Media Queries ****/
 
 @media (min-width: 768px) {
     .navbar .navbar-nav {
-        display: inline-block;
-        float: none;
-        vertical-align: top;
+      display: inline-block;
+      float: none;
+      vertical-align: top;
     }
 
     .navbar .navbar-collapse {
-        text-align: center;
+      text-align: center;
     }
 
     .navbar .navbar-collapse ul li {
-        padding-right: 2em;
+      padding-right: 2em;
+    }
+
+    #logo {
+      font-size: 3em;
     }
 }
