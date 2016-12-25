@@ -1,0 +1,35 @@
+body {
+  padding-bottom: 70px;
+}
+
+#logo {
+  font-family: 'Bungee Shade', cursive;
+  text-align: right;
+
+}
+
+#logo span {
+}
+
+#wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/**** Media Queries ****/
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+
+    .navbar .navbar-collapse ul li {
+        padding-right: 2em;
+    }
+}
