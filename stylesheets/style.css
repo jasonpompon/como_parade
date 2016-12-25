@@ -31,6 +31,21 @@
   width: 100%;
 }
 
+#section-menu {
+  height: 100vh;
+  width: 100%;
+}
+
+#section-find {
+  height: 100vh;
+  width: 100%;
+}
+
+#section-contact {
+  height: 100vh;
+  width: 100%;
+}
+
 /*#home-content {
   height: 100%;
   width: 100%;
