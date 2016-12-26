@@ -10,7 +10,6 @@
 }
 
 #logo span {
-  font-size: 0.8em;
 }
 
 #home-content {
@@ -46,6 +45,11 @@
   width: 2.5em;
   padding: 0.5em;
   border-radius: 10px;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
 }
 
 #social-content img:hover {
