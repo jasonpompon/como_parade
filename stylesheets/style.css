@@ -1,26 +1,61 @@
-/*body {
-  padding-bottom: 70px;
-}*/
-
 #logo {
-  font-family: 'Bungee Shade', cursive;
+  font-family: 'Bungee Outline', cursive;
   text-align: center;
   margin-top: 0;
-  color: white;
-  padding-top: 1em;
+  color: #f9f9f9;
+  padding-top: 0.5em;
+  letter-spacing: 0.2em;
+  line-height: 1.2em;
+  font-weight: bold;
 }
 
 #logo span {
+  font-size: 0.8em;
 }
 
-/*#wrapper {
+#home-content {
   width: 80%;
   margin: 0 auto;
-}*/
+  text-align: center;
+  margin-top: 4em;
+  font-family: 'PT Sans', sans-serif;
+  color: #f9f9f9;
+  font-size: 1.5em;
+  background: rgb(42, 42, 42); /* Fall-back for browsers that don't
+                                support rgba */
+  background: rgba(42, 42, 42, .7);
+  width: 45%;
+  letter-spacing: 0.13em;
+  padding: 1em 0;
+}
+
+#home-content article span {
+  color: #f9f9f9;
+  opacity: 0.5;
+}
+
+#social-content {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 2.5em;
+}
+
+#social-content img {
+  margin-right: 1.3em;
+  width: 2.5em;
+  padding: 0.5em;
+  border-radius: 10px;
+}
+
+#social-content img:hover {
+  background-color: black;
+  opacity: 0.7;
+  cursor: pointer;
+}
 
 #section-intro {
-  background: url("../images/intro_background.jpg") center center;
-  background-repeat: no-repeat;
+  background: url("../images/intro_background.jpg") no-repeat center center;
   background-size: cover;
   height: 100vh;
   width: 100%;
@@ -46,10 +81,6 @@
   width: 100%;
 }
 
-/*#home-content {
-  height: 100%;
-  width: 100%;
-}*/
 
 /**** Media Queries ****/
 
@@ -71,4 +102,11 @@
     #logo {
       font-size: 3em;
     }
+}
+
+@media (max-width: 768px) {
+  #home-content {
+    width: 80%;
+  }
+
 }
