@@ -61,23 +61,25 @@
 #section-intro {
   background: url("../images/intro_background.jpg") no-repeat center center;
   background-size: cover;
-  height: 100vh;
+  height: 93vh;
   width: 100%;
 }
 
 #section-about {
-  height: 100vh;
+  height: 93vh;
   width: 100%;
 }
 
 #section-menu {
-  height: 100vh;
+  height: 93vh;
   width: 100%;
 }
 
 #section-find {
-  height: 100vh;
+  height: 93vh;
   width: 100%;
+  background: url("../images/find_us_bak.jpg") no-repeat center center;
+  background-size: cover;
 }
 
 #section-contact {
@@ -91,12 +93,6 @@
   margin: 0 auto;
 }
 
-#map img {
-  width: 60vh;
-  margin-left: 1.5em;
-  text-align: center;
-}
-
 #section-find > h1 {
   text-align: center;
 }
@@ -105,6 +101,10 @@
   width: 50%;
   float: right;
   text-align: center;
+  color: #f9f9f9;
+  background: rgb(42, 42, 42); /* Fall-back for browsers that don't
+                                support rgba */
+  background: rgba(42, 42, 42, .7);
 }
 
 .find-content li {
@@ -114,9 +114,8 @@
 }
 
 iframe {
-  padding-top: 20px;
-  width: 600px;
-  height: 550px;
+  width: 100%;
+  height: 93vh;
 }
 
 /**** Media Queries ****/
@@ -151,16 +150,25 @@ iframe {
     width: 1.5em;
   }
 
-
-  iframe {
-    padding-top: 20px;
-    width: 350px;
-    height: 300px;
+  .find-content {
+    padding: 2em 0;
+    width: 100%;
+    float: none;
   }
 
   #map {
     width: 100%;
+    float: none;
   }
 
+  .find-content li {
+    padding: 0.8em;
+    font-size: 1.1em;
+  }
+
+  iframe {
+    width: 100%;
+    height: 40vh;
+  }
 
 }
