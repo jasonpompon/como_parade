@@ -7,10 +7,10 @@
   <title>Como Parade Cafe</title>
   <link href="https://fonts.googleapis.com/css?family=Bungee+Outline|PT+Sans" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="./stylesheets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.1.1/ekko-lightbox.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-
   <div id="wrapper">
     <section id="section-intro">
       <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
@@ -23,15 +23,14 @@
                       <span class="icon-bar"></span>
                   </button>
               </div>
-
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
                       <li><a href="#section-intro">HOME</a></li>
-                      <li><a href="#section-about">ABOUT</a></li>
-                      <li><a href="#section-menu">MENU</a></li>
+                      <li><a href="#section-catering">ABOUT US</a></li>
+                      <li><a href="https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/15337485_920308681439322_7951709653656196123_n.jpg?oh=0569ce2fcd62aaebf9ad084506d0a640&oe=590AB7FB" data-toggle="lightbox" data-title="Catering Menu">MENU</a></li>
                       <li><a href="#section-find">FIND US</a></li>
-                      <li><a href="#section-contact">CONTACT</a></li>
+                      <li><a href="#" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">CATERING</a></li>
                   </ul>
               </div>
           </div>
@@ -43,19 +42,53 @@
           <p><span>Tel</span> (03) 9583 3003</p>
         </article>
         <div id="social-content">
-            <span><a href="https://www.instagram.com/comoparadecafe/" target="_blank"><img src="./images/instagram-64.ico" alt=""></a></span>
-            <span><a href="https://www.facebook.com/ComoParadeCafe/" target="_blank"><img src="./images/facebook-64.ico" alt=""></a></span>
-            <span><a href="https://twitter.com/ComoParade" target="_blank"><img src="./images/twitter-64.ico" alt=""></a></span>
+            <span><a href="https://www.instagram.com/comoparadecafe/" target="_blank"><img src="./img/instagram-64.ico" alt=""></a></span>
+            <span><a href="https://www.facebook.com/ComoParadeCafe/" target="_blank"><img src="./img/facebook-64.ico" alt=""></a></span>
+            <span><a href="https://twitter.com/ComoParade" target="_blank"><img src="./img/twitter-64.ico" alt=""></a></span>
         </div>
       </div>
-    </section>
-    <section id="section-about">
-      <h1>About</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam animi magni neque minus laborum deserunt, ratione est, voluptates ducimus! Reiciendis maiores magnam ab error omnis accusamus ad maxime placeat distinctio.</p>
-    </section>
-    <section id="section-menu">
-      <h1>Menu</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam animi magni neque minus laborum deserunt, ratione est, voluptates ducimus! Reiciendis maiores magnam ab error omnis accusamus ad maxime placeat distinctio.</p>
+      <!-- Modal for ordering catering -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title" id="exampleModalLabel">Book your catering</h4>
+              <p class="modal-text" id="exampleModalLabel">Enter your details and we will get back to you</p>
+            </div>
+            <div class="modal-body">
+              <form action="http://flipmail.co/api/BrdMsvLqMpmuZnu1BjAC" method="post">
+                <div class="form-group">
+                  <label for="recipient-name" class="form-control-label">Name:</label>
+                  <input type="text" class="form-control" id="recipient-name" name="name">
+                </div>
+                <div class="form-group">
+                  <label class="cform-control-label">Email</label>
+                  <input type="email" class="form-control" id="inputEmail3" name:"email">
+                </div>
+                <div class="form-group">
+                  <label for="recipient-name" class="form-control-label">Phone Number:</label>
+                  <input type="number" class="form-control" id="recipient-name" name="phone">
+                </div>
+                <div class="form-group">
+                  <label for="recipient-name" class="form-control-label">Number of Guests:</label>
+                  <input type="number" class="form-control" id="recipient-name" min="0" name="number_of_guests">
+                </div>
+                <div class="form-group">
+                  <label for="message-text" class="form-control-label">Message:</label>
+                  <textarea class="form-control" id="message-text" name="message" placeholder="Please include any dietary requirements, the date and time of event."></textarea>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-primary">Send message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <section id="section-find">
       <div class="find-content">
@@ -69,22 +102,31 @@
         </ul>
       </div>
       <div id="map">
+        <div class="overlay" onClick="style.pointerEvents='none'"></div>
         <iframe
           frameborder="0" style="border:0"
           src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC3Gl2JO4Alp9ZvBX7RV3Ml9J5P9vpd53I&q=Como+Parade+Cafe,Mentone+VIC+Australia" allowfullscreen>
       </iframe>
       </div>
     </section>
-    <section id="section-contact">
-      <h1>Contact</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam animi magni neque minus laborum deserunt, ratione est, voluptates ducimus! Reiciendis maiores magnam ab error omnis accusamus ad maxime placeat distinctio.</p>
-    </section>
   </div>
+  <section id="section-catering">
+    <h1>About Us</h1>
+    <h2>Page Under Construction</h2>
+  </section>
+
   <script
     src="https://code.jquery.com/jquery-3.1.1.min.js"
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.1.1/ekko-lightbox.js"></script>
+  <script>
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+      event.preventDefault();
+      $(this).ekkoLightbox();
+    });
+  </script>
   <script src="./javascript/smooth_scrolling.js"></script>
 </body>
 </html>
