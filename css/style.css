@@ -66,8 +66,11 @@
 }
 
 #section-about {
+  background-color: #2a2a2a;
+  color: white;
   height: 97vh;
   width: 100%;
+  background-size: cover;
 }
 
 #section-menu {
@@ -76,16 +79,40 @@
 }
 
 #section-find {
-  height: 97vh;
+  height: 100vh;
   width: 100%;
   background: url("../img/find_us_bak.jpg") no-repeat center center;
   background-size: cover;
 }
 
-#section-catering {
-  height: 100vh;
-  width: 100%;
+.about-content {
+  margin-top: 2em;
+  padding: 0 3em;
+  line-height: 2em;
 }
+
+/*layer of white over backgroud image*/
+
+.gallery {
+  padding-top: 2em;
+  background: url("../img/13686738_842987105838147_7432687596381400397_n.jpg") no-repeat center center;
+  background-size: cover;
+  color: #2a2a2a;
+  height: 100%;
+  position: relative;
+}
+
+
+.layer {
+  background-color: white;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 
 #map {
   width: 50%;
@@ -102,6 +129,7 @@
   float: right;
   text-align: center;
   color: #f9f9f9;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .find-content li {
@@ -178,6 +206,14 @@ iframe {
     display: none;
     width: 100%;
     height: 40vh;
+  }
+
+  .overlay {
+    display: none;
+  }
+
+  .gallery {
+    display: none;
   }
 
 }
