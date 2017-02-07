@@ -127,16 +127,32 @@
 .find-content {
   width: 50%;
   float: right;
-  text-align: center;
+  text-align: left;
   color: #f9f9f9;
   font-family: 'PT Sans', sans-serif;
 }
 
-.find-content li {
-  list-style: none;
-  padding: 2em;
-  font-size: 1.5em;
+.find-content > h1 {
+  text-align: center;
 }
+
+.find-content li {
+  text-shadow: 2px 2px #4b2b2b;
+  list-style: none;
+  padding: 1.5em;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.find-content li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.find-content li a:hover {
+  color: mistyrose;
+}
+
 
 iframe {
   width: 100%;
@@ -151,6 +167,10 @@ iframe {
    height:93vh;
    top:93vh;
    margin-top:-93vh;
+}
+
+.icons {
+  width: 1em;
 }
 
 /**** Media Queries ****/
@@ -199,7 +219,7 @@ iframe {
 
   .find-content li {
     padding: 0.8em;
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
 
   iframe {
@@ -214,6 +234,10 @@ iframe {
 
   .gallery {
     display: none;
+  }
+
+  .find-content > h1 {
+    padding: 1em;
   }
 
 }
