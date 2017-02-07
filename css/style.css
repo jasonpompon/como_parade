@@ -102,6 +102,11 @@
   position: relative;
 }
 
+.gallery-content {
+  margin-top: 2em;
+  padding: 0 3em;
+}
+
 
 .layer {
   background-color: white;
@@ -171,6 +176,10 @@ iframe {
 
 .icons {
   width: 1em;
+}
+
+.thumnail {
+  width: 100%;
 }
 
 /**** Media Queries ****/
